@@ -1,0 +1,1 @@
+map=/a/b:/c/d:rw;uidmap=0:1000:1;gidmap=0:1000:1

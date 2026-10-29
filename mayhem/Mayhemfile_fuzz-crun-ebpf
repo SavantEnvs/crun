@@ -1,0 +1,10 @@
+project: savantenvs/crun
+target: fuzz-crun-ebpf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-crun-ebpf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-crun-ebpf
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz-crun-ebpf/fuzz-crun-ebpf.dict
+    timeout: 5

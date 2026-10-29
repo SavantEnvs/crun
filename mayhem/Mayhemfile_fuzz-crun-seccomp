@@ -1,0 +1,9 @@
+project: savantenvs/crun
+target: fuzz-crun-seccomp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-crun-seccomp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-crun-seccomp
+    libfuzzer: true
+    timeout: 5
